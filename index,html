@@ -19,8 +19,6 @@
             <button id="generate-multiple">Generate 5</button>
         </div>
     </div>
-
-    <!-- Модальное окно для отображения изображений -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
