@@ -1,36 +1,15 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: Arial, sans-serif;
-    position: relative;
-    overflow: auto;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('https://img.freepik.com/premium-photo/blue-wash-day-japanese-village_1282444-172329.jpg?w=360') no-repeat center center;
+    margin: 0;
+    padding: 0;
+    background: url('https://pibig.info/uploads/posts/2022-12/1670033417_1-pibig-info-p-ochen-krasivie-foni-krasivo-1.jpg') no-repeat center center fixed;
     background-size: cover;
-    z-index: -1;
-}
-
-.content {
-    position: relative;
-    z-index: 1;
 }
 
 header {
     width: 100%;
     background-color: rgba(13, 13, 13, 0.8);
-    padding: 15px 0;
+    padding: 20px 0;
     text-align: center;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
     box-shadow: 0 5px 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.2);
@@ -38,69 +17,6 @@ header {
     top: 0;
     left: 0;
     z-index: 999;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header-animation {
-    width: 50px;
-    height: auto;
-    margin-left: 10px;
-    opacity: 0;
-    animation: fade-in 1.3s forwards 3.2s;
-}
-
-.animated-title {
-    font-size: 36px;
-    font-family: 'Arial Black', sans-serif;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: wave 1.5s forwards;
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes typing {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-.animated-title span {
-    display: inline-block;
-    animation: appear 0.5s forwards;
-}
-
-@keyframes appear {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-.animated-title::before {
-    content: attr(data-title);
-    display: inline-block;
 }
 
 h1 {
@@ -119,70 +35,30 @@ h1 {
 }
 
 textarea {
-    width: 100%;
-    height: 50px;
+    width: 80%;
+    height: 100px;
     margin-bottom: 20px;
     padding: 10px;
     border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
     color: white;
 }
 
 button {
     padding: 10px 20px;
-    margin-right: 15px;
     border: none;
     border-radius: 5px;
-    background: rgba(0, 255, 255, 0.4);
-    color: white;
-    font-size: 1.6rem;
+    background: rgba(0, 255, 255, 0.6);
+    color: black;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    animation: pulse 2s infinite ease-in-out;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background: rgba(0, 255, 255, 0.7);
-    transform: scale(1.05);
+    background: rgba(0, 255, 255, 0.8);
 }
-
-.button-card {
-    bottom: 10px;              /* Расстояние от низа контейнера */
-    padding: 8px 15px;
-    margin-right: 25px;
-}
-
-.button-link {
-    background: rgba(0, 255, 255, 0.4);
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 10px 20px;
-    text-align: center;
-    transition: background 0.3s, transform 0.3s;
-    animation: pulse 2s infinite ease-in-out;
-    display: inline-block;
-}
-
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 5px rgba(0, 255, 255, 0.4);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 5px rgba(0, 255, 255, 0.4);
-    }
-}
-
 
 .modal {
     display: none;
@@ -204,12 +80,11 @@ button:hover {
     width: 80%;
     max-width: 600px;
     text-align: center;
-    border-radius: 10px;
 }
 
 .modal-content img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .close {
@@ -232,393 +107,53 @@ button:hover {
     font-size: 1.5rem;
 }
 
- .container-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.vertical-containers {
-    display: flex;
-    width: 100%;
-    opacity: 0.8;
-}
-
-.left-container,
-.right-container {
-  
-    width: 50%;
-    padding: 20px;
-}
-
-#historyTable {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-collapse: collapse;
-}
-
-#historyTable th,
-#historyTable td {
-    padding: 8px;
-    border: 1px solid #ccc;
-    text-align: center;
-}
-
-#historyTable th {
-  color: 4444;
-  padding: 24px;
-  color: white;
-  font-size: 22px; 
-}
-
-#historyTable td {
-    transition: all 0.3s ease;
-    padding: 10px;
-}
-
-#historyTable td:hover {
-    font-size: 1.2em;
-    font-weight: bold; 
-    background-color: rgba(200, 200, 200, 0.2);
-    cursor: pointer;
-}
-
-.bottom-container {
-    left: 50%;
-    right: 50;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    margin: 20px;
-}
-
-.bottom-container h3,
-.bottom-container p,
-.bottom-container a {
-    user-select: none; /* Запрещает выделение текста для заголовков, описаний и ссылок */
-}
-
-.news-item {
-    animation: slideDown 0.5s forwards;
-    opacity: 0;
-}
-
-.news-icon {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-
-.news-text {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 18px;
-    color: white (0, 255, 255, 0.6);
-    text-shadow: black;
-    line-height: 1.5;
-}
-
-.subscribe {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.subscribe-text {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 24px;
-    color: black;
-    text-shadow: 0 0 10px lightblue;
-    margin-bottom: 10px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-}
-
-.social-icon {
-    width: 50px;
-    height: 50px;
-    margin: 0 10px;
-    opacity: 0.8;
-    transition: transform 0.3s;
-    border: 2px solid black;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.social-icon:hover {
-    transform: scale(1.6);
-}
-
-@keyframes slideDown {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
+    .twitter-icon {
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        opacity: 0.25;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        z-index: 1000;
     }
-    100% {
-        transform: translateY(0);
+
+    .twitter-icon:hover {
         opacity: 1;
+        transform: scale(1.2);
     }
+
+    .lp-icon {
+            position: fixed;
+            background-color: #4444;
+            bottom: 10px;
+            left: 25%;
+            opacity: 0.35;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
 }
 
-.loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    display: none;
-}
-
-.loading-gif {
-    width: 150px;
-    height: 150px;
-}
-
-.donation-button {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.donation-button button {
-    padding: 10px 20px;
-    background-color: #4444;
-    color: Black;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 14px;
-}
-
-.donation-button button:hover {
-    background: none;
-    transform: scale(1.1);
-}
-
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.2);
-    color: black;
-    font-size: 16px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    cursor: pointer;
-}
-
-h2 {
-    color: white;
-    margin-bottom: 10px;
-}
-
-.background-controls {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
-#remove-background {
-    color: white;
-    border: none;
-    padding: 15px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-#remove-background:hover {
-    background-color: #ff0000;
-}
-
-.upload-label {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    padding: 15px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.upload-icon {
-    width: 34px;
-    height: 34px;
-    margin-right: 10px;
-}
-
-.input-wrapper {
-    position: relative;
-    width: 90%;
-}
-
-#text-input {
-    width: 100%;
-    padding: 20px;
-    padding-right: 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: 1;
-    box-sizing: border-box;
-}
-
-.clear-icon {
-    position: absolute;
-    right: 15px;
-    top: 40%;
-    transform: translateY(-50%);
-    font-size: 70px;
-    color: white;
-    cursor: pointer;
-    display: none;
-}
-
-.clear-icon:hover {
-    color: Red;
-}
-
-#text-input {
-    width: 100%;
-    padding: 50px;
-    padding-right: 50px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
-    font-size: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.3);
-    overflow-y: scroll;
-    scrollbar-width: none;
-    transition: border 0.3s ease;
-}
-
-html {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-html::-webkit-scrollbar {
-    display: none;
-}
-
-body {
-    position: relative;
-    overflow-y: scroll;
-}
-
-.scroll-indicator {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 8px;
-    height: 100%;
-    background: linear-gradient(180deg, #00FFFF, #007FFF);
-    opacity: 0;
-    transition: opacity 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
-    z-index: 9999;
-    
-    
-    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF, 0 0 80px #007FFF;
-    filter: blur(1px);
-}
-
-.scroll-indicator.active {
-    opacity: 1;
-}
-
-@keyframes scroll-pulse {
-    0%, 100% {
-        height: 5px;
+    .lp-icon:hover {
         opacity: 1;
+        transform: scale(1.3);
     }
-    50% {
-        height: 100%;
+
+.lr-icon {
+            position: fixed;
+            background-color: #4444;
+            bottom: 10px;
+            right: 25%;
+            opacity: 0.55;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+    .lr-icon:hover {
         opacity: 1;
+        transform: scale(1.3);
     }
-}
-
-/* КНОПКИ */
-
-.btn-transparent {
-    background-color: rgba(255, 255, 255, 0.5); /* 50% прозрачность */
-    color: white; /* Белый текст */
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn-transparent:hover {
-    background-color: rgba(255, 255, 255, 0.7); /* Увеличение прозрачности при наведении */
-}
-
-/*================== Контейнер карточек приложений ================*/
-.app-card h3,
-.app-card p,
-.app-card a {
-    user-select: none; /* Запрещает выделение текста для заголовков, описаний и ссылок */
-}
-
-.app-card h3 {
-    overflow: hidden; /* Скрывает лишний текст */
-    text-overflow: ellipsis; /* Добавляет многоточие */
-}
-
-.app-card p {
-    max-width: 250px; /* Максимальная ширина описания */
-    overflow: hidden; /* Скрывает лишний текст */
-    text-overflow: ellipsis; /* Добавляет многоточие */
-}
-
-
-.app-panel-container {
-    overflow: hidden;
-    cursor: grab;
-    width: 100%;
-    max-width: 600px;
-    position: relative;
-}
-
-.app-panel {
-    display: flex;
-    gap: 16px;
-    overflow-x: hidden;
-    padding: 10px;
-    scroll-behavior: smooth;
-}
-
-.app-card {
-    min-width: 150px;
-    flex-shrink: 0;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    padding: 10px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-}
-
-.app-panel-container:active {
-    cursor: grabbing;
-}
-
-.app-panel-container h2 {
-    position: flex;
-    padding: 10px 10px;
-    margin-bottom: 10px; /* Отступ снизу */
-    margin-right: 20px;
-    font-size: 24px; /* Размер шрифта */
-    color: white; /* Белый текст */
-}
