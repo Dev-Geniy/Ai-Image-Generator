@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const promises = [];
         for (let i = 0; i < count; i++) {
             const encodedDescription = encodeURIComponent(createDescription(description));
-            const imageUrl = https://image.pollinations.ai/prompt/${encodedDescription}?nologo=1&seed=${generateRandomSeed()}&height=512&width=512;
+            const imageUrl = `https://image.pollinations.ai/prompt/${encodedDescription}?nologo=1&seed=${generateRandomSeed()}&height=512&width=512`; // Исправлено
             const proxyUrl = "https://corsproxy.io/?";
             const proxiedImageUrl = proxyUrl + encodeURIComponent(imageUrl);
 
@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
             img.style.marginBottom = "10px"; // Отступ между изображениями
             generatedImagesContainer.appendChild(img); // Добавление изображения в контейнер
         });
+        downloadButton.style.display = "block"; // Показать кнопку загрузки
         modal.style.display = "block"; // Открыть модальное окно
     }
 });
