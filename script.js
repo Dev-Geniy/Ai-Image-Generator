@@ -8,9 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const downloadButton = document.getElementById("download");
     const closeButton = document.querySelector(".close");
 
-    // Скрыть кнопку загрузки изначально
-    downloadButton.style.display = "none";
-
     // Обработчик события для кнопки генерации одного изображения
     generateButton.addEventListener("click", function () {
         generateImage(1); // Генерируем одно изображение
